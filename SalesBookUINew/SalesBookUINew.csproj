@@ -22,20 +22,129 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.css" />
-    <Content Include="index.html" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\bank\bank.component.html" />
+    <Content Include="src\app\bank\bankaddedit\bankaddedit.component.html" />
+    <Content Include="src\app\company\company.component.html" />
+    <Content Include="src\app\company\companyaddedit\companyaddedit.component.html" />
+    <Content Include="src\app\custvend\custvend.component.html" />
+    <Content Include="src\app\custvend\custvendaddedit\custvendaddedit.component.html" />
+    <Content Include="src\app\layout\footer\footer.component.html" />
+    <Content Include="src\app\layout\header\header.component.html" />
+    <Content Include="src\app\layout\layout\layout.component.html" />
+    <Content Include="src\app\layout\side-menu\side-menu.component.html" />
+    <Content Include="src\app\login\login.component.html" />
+    <Content Include="src\app\product-master\product-master-add-edit\product-master-add-edit.component.html" />
+    <Content Include="src\app\product-master\product-master.component.html" />
+    <Content Include="src\app\quotations\quotationaddedit\quotationaddedit.component.html" />
+    <Content Include="src\app\quotations\quotations.component.html" />
+    <Content Include="src\app\sales\sales.component.html" />
+    <Content Include="src\app\sales\salesaddedit\salesaddedit.component.html" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="angular.json" />
+    <Content Include="package.json" />
+    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\bank\bank.component.scss" />
+    <Content Include="src\app\bank\bankaddedit\bankaddedit.component.scss" />
+    <Content Include="src\app\company\company.component.scss" />
+    <Content Include="src\app\company\companyaddedit\companyaddedit.component.scss" />
+    <Content Include="src\app\custvend\custvend.component.scss" />
+    <Content Include="src\app\custvend\custvendaddedit\custvendaddedit.component.scss" />
+    <Content Include="src\app\layout\footer\footer.component.scss" />
+    <Content Include="src\app\layout\header\header.component.scss" />
+    <Content Include="src\app\layout\layout\layout.component.scss" />
+    <Content Include="src\app\layout\side-menu\side-menu.component.scss" />
+    <Content Include="src\app\login\login.component.scss" />
+    <Content Include="src\app\product-master\product-master-add-edit\product-master-add-edit.component.scss" />
+    <Content Include="src\app\product-master\product-master.component.scss" />
+    <Content Include="src\app\quotations\quotationaddedit\quotationaddedit.component.scss" />
+    <Content Include="src\app\quotations\quotations.component.scss" />
+    <Content Include="src\app\sales\sales.component.scss" />
+    <Content Include="src\app\sales\salesaddedit\salesaddedit.component.scss" />
+    <Content Include="src\assets\.gitkeep" />
+    <Content Include="src\styles.scss" />
+    <Content Include="tsconfig.app.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tsconfig.spec.json" />
+    <Content Include="tslint.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\appsettings.ts" />
+    <TypeScriptCompile Include="src\app\bank\bank.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\bank\bank.component.ts" />
+    <TypeScriptCompile Include="src\app\bank\bank.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\bank\bank.service.ts" />
+    <TypeScriptCompile Include="src\app\bank\bankaddedit\bankaddedit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\bank\bankaddedit\bankaddedit.component.ts" />
+    <TypeScriptCompile Include="src\app\common.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\common.service.ts" />
+    <TypeScriptCompile Include="src\app\company\company.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\company\company.component.ts" />
+    <TypeScriptCompile Include="src\app\company\company.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\company\company.service.ts" />
+    <TypeScriptCompile Include="src\app\company\companyaddedit\companyaddedit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\company\companyaddedit\companyaddedit.component.ts" />
+    <TypeScriptCompile Include="src\app\custvend\custvend.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\custvend\custvend.component.ts" />
+    <TypeScriptCompile Include="src\app\custvend\custvend.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\custvend\custvend.service.ts" />
+    <TypeScriptCompile Include="src\app\custvend\custvendaddedit\custvendaddedit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\custvend\custvendaddedit\custvendaddedit.component.ts" />
+    <TypeScriptCompile Include="src\app\layout\footer\footer.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\layout\footer\footer.component.ts" />
+    <TypeScriptCompile Include="src\app\layout\footer\footer.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\layout\footer\footer.service.ts" />
+    <TypeScriptCompile Include="src\app\layout\header\header.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\layout\header\header.component.ts" />
+    <TypeScriptCompile Include="src\app\layout\header\header.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\layout\header\header.service.ts" />
+    <TypeScriptCompile Include="src\app\layout\layout.module.ts" />
+    <TypeScriptCompile Include="src\app\layout\layout\layout.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\layout\layout\layout.component.ts" />
+    <TypeScriptCompile Include="src\app\layout\side-menu\side-menu.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\layout\side-menu\side-menu.component.ts" />
+    <TypeScriptCompile Include="src\app\login\login.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\login\login.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\login\login.service.ts" />
+    <TypeScriptCompile Include="src\app\product-master\product-master-add-edit\product-master-add-edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\product-master\product-master-add-edit\product-master-add-edit.component.ts" />
+    <TypeScriptCompile Include="src\app\product-master\product-master.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\product-master\product-master.component.ts" />
+    <TypeScriptCompile Include="src\app\product-master\product-master.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\product-master\product-master.service.ts" />
+    <TypeScriptCompile Include="src\app\quotations\quotationaddedit\quotationaddedit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\quotations\quotationaddedit\quotationaddedit.component.ts" />
+    <TypeScriptCompile Include="src\app\quotations\quotations.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\quotations\quotations.component.ts" />
+    <TypeScriptCompile Include="src\app\quotations\quotations.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\quotations\quotations.service.ts" />
+    <TypeScriptCompile Include="src\app\sales\sales.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\sales\sales.component.ts" />
+    <TypeScriptCompile Include="src\app\sales\sales.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\sales\sales.service.ts" />
+    <TypeScriptCompile Include="src\app\sales\salesaddedit\salesaddedit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\sales\salesaddedit\salesaddedit.component.ts" />
+    <TypeScriptCompile Include="src\app\token.interceptor.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\test.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

@@ -1,0 +1,92 @@
+<mat-card>
+    <div fxLayout="row">
+        <div fxFlex="20" class="m-333">
+            <button (click)="openPopUp()" mat-raised-button color="primary">
+                <mat-icon style="padding-right:3px;margin-bottom:2px">
+                    add
+                </mat-icon>Create New Product
+            </button>
+        </div>
+        <div fxFlex="80" fxLayoutAlign="end center">
+            <mat-form-field class="pt-0 pb-0">
+                <input matInput placeholder="Search" [(ngModel)]="query.SearchText" (input)="searchCallback()" />
+            </mat-form-field>
+            <mat-icon>search</mat-icon>
+        </div>
+    </div>
+</mat-card>
+<!--<mat-card><button mat-raised-button color="primary"><mat-icon style="padding-right:3px;margin-bottom:2px">attachment</mat-icon>Create New Product</button></mat-card>-->
+<mat-card>
+    <table border="1" class="table_data_section try-data-table">
+        <thead>
+            <tr>
+                <th class="th-TrayQty"
+                    (click)="sortClick('ProductName')"
+                    [ngClass]="{ 'sorting': isSorting('Name'), 'sorting_asc': isSortAsc('Name'), 'sorting_desc': isSortDesc('Name') }">
+                    Name
+                </th>
+                <th class="th-TrayQty"
+                    (click)="sortClick('Description')"
+                    [ngClass]="{ 'sorting': isSorting('Description'), 'sorting_asc': isSortAsc('Description'), 'sorting_desc': isSortDesc('Description') }">
+                    Description
+                </th>
+                <th class="th-TrayQty"
+                    (click)="sortClick('HSNCode')"
+                    [ngClass]="{ 'sorting': isSorting('HSNCode'), 'sorting_asc': isSortAsc('HSNCode'), 'sorting_desc': isSortDesc('HSNCode') }">
+                    HSNCode
+                </th>
+                <th class="th-TrayQty"
+                    (click)="sortClick('BasePrice')"
+                    [ngClass]="{ 'sorting': isSorting('BasePrice'), 'sorting_asc': isSortAsc('BasePrice'), 'sorting_desc': isSortDesc('BasePrice') }">
+                    BasePrice
+                </th>
+                <th class="th-TrayQty">
+                    Locked
+                </th>
+                <th class="th-1">WebAction</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of items">
+                <td>
+                    {{item.ProductName}}<br>
+
+                </td>
+                <td>
+                    <small>{{item.Description}}</small>
+                </td>
+                <td>
+                    {{item.HSNCode}}
+                </td>
+                <td>
+                    {{item.BasePrice | currency:'INR'}}
+                </td>
+                <td>
+                    <mat-slide-toggle class="example-margin" style="margin-left:70px"
+                                      color="warn" 
+                                      [checked]="item.Locked"
+                                      [disabled]="true">
+                    </mat-slide-toggle>
+                </td>
+                <td>
+                    <button (click)="openPopUp(item,false)" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button (click)="deleteItem(item)" mat-icon-button color="warn" aria-label="Example icon button with a menu icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <mat-paginator [length]="query.TotalCount"
+                   [pageSize]="query.PageSize"
+                   (page)="ListPageChangeEvent($event)">
+    </mat-paginator>
+
+
+</mat-card>
